@@ -10,8 +10,8 @@ use Mix.Config
 config :music_updates,
   ecto_repos: [MusicUpdates.Repo],
   user_id: "jackmoch",
-  scopes: ["playlist-read-private", "playlist-modify-private"],
-  redirect_uri: "http://localhost:4000",
+  scopes: ["playlist-read-private", "user-read-email", "user-read-private"],
+  redirect_uri: "http://localhost:4000"
   
 # Configures the endpoint
 config :music_updates, MusicUpdatesWeb.Endpoint,

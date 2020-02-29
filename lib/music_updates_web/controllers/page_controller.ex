@@ -15,6 +15,14 @@ defmodule MusicUpdatesWeb.PageController do
            {:ok, resp} -> resp |> Map.get(:body) |> Jason.decode
            _ -> IO.puts("Error")
          end
+
+    {:ok, %{"display_name" => display_name, "id" => id }} = HTTPoison.get("https://api.spotify.com/v1/me", %{"Authorization" => "Bearer " <> access_token})
+      |> case do
+           {:ok, resp} -> resp |> Map.get(:body) |> Jason.decode
+           _ -> IO.puts("Error")
+         end
+    import IEx
+    IEx.pry
      
     render(conn, "index.html")
   end
