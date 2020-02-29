@@ -1,0 +1,6 @@
+<section class="row">
+  <article class="column">
+    <h1>Log In With Spotify</h1>
+      <%= link "Log In", to: "/login"%>
+  </article>
+</section>
